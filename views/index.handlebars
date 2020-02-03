@@ -1,55 +1,63 @@
-<h1>Burgers!</h1>
-
-<h2>Burgers that are ready to eat!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      <li>
-        {{burger_name}}
-        <button class="changeDevour" data-id="{{id}}">Devour It!</button>
-      </li>
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Burgers that are already devoured!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      <li>
-        {{burger_name}}
-      </li>
-    {{/if}}
-  {{/each}}
-</ul>
-
-{{!-- <ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-<h2>Cats that are sleepy!</h2>
-
-<ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
-    {{/if}}
-  {{/each}}
-</ul> --}}
-
-<h2>Enter a burger name you want to eat and click to Submit to order</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="burger">Burger Name:</label>
-    <input type="text" id="burger" name="burger_name">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-3 w-100 d-flex justify-content-center flex-wrap">
+      <img class="w-12 mt-3" id="burgerImg" src="/assets/img/hamburgerMain.png">
+      <h3>Eat-Da-Burger!</h3>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 d-flex justify-content-center flex-wrap d-block">
+      <h5 class="d-inline">Enter a burger name you want to eat and click to Submit to order</h5>
+      <form class="create-form" autocomplete="off">
+        <div class="form-group">
+          <input class="mt-2" type="text" id="burger" name="burger_name">
+          <button class="btn btn-primary btn-sm ml-4" type="submit">Submit</button>
+          <div class="col-md-2"></div>
+        </div>
+      </form>
+    </div>
   </div>
 
-  <button type="submit">Submit</button>
-</form>
+  <div class="row">
+    <div class="col-md-6">
+      <div id="notDevoured">
+        <h5 class="d-flex justify-content-center">Burgers that are ready to eat!</h2>
+
+          <ul>
+            {{#each burgers}}
+            {{#unless devoured}}
+            <li>
+              {{burger_name}}
+              <button class="changeDevour" data-id="{{id}}">Devour It!</button>
+            </li>
+            {{/unless}}
+            {{/each}}
+          </ul>
+
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div id="devoured">
+        <h5 class="d-flex justify-content-center">Burgers that are already devoured!</h2>
+
+          <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            <li>
+              {{burger_name}}
+            </li>
+            {{/if}}
+            {{/each}}
+          </ul>
+
+      </div>
+    </div>
+  </div>
+
+
+
+</div>

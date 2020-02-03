@@ -1,6 +1,11 @@
+.container{
+  width: 100%;
+  background-color: darkgrey;
+}
+
 li {
   padding: 5px;
-  margin: 5px;
+  margin: 10px 20px 0px 10px;
   background: #faebd7;
 }
 
@@ -17,3 +22,22 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+
+#notDevoured{
+  width: 500px;
+  height: 400px;
+  background-color: brown
+}
+
+#devoured{
+  width: 500px;
+  height: 400px;
+  background-color:burlywood;
+}
+
+#burgerImg{
+  width: 150px;
+  height: 150px;
+}
+
+
