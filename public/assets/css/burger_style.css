@@ -1,6 +1,6 @@
 .container{
-  width: 100%;
   background-color: darkgrey;
+  height: 800px;
 }
 
 li {
